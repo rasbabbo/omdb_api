@@ -2,12 +2,14 @@ var express = require("express");
 var request = require("request");
 var bodyParser = require('body-parser');
 
+
 var app = express();
 
 var movies = [];
 
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded());
 
 //homepage - just sittin there listening:
 app.get('/', function(req, res){

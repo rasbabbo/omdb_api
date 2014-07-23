@@ -1,9 +1,11 @@
 <!doctype html>
 <head>
+	
 	<title>Favorites</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>To Watch Later</h1>
+	<h1>To Watch Later </h1>
 		<%movies.forEach(function(title) { %>
 			<h2> <a href ="/movie/"><%= title.title %> </h2>
 			<% }) %>

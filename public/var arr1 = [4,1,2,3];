@@ -1,0 +1,14 @@
+var arr1 = [4,1,2,3];
+
+function mergeSort(array) {
+	if (array[i] > 1) {
+	if (array[0] > array[1]) {
+		array.splice(0, 1);
+		return array;
+	} else {
+	array.splice(1,1)
+	return array
+	} else {
+
+	}
+}
