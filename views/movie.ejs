@@ -14,9 +14,9 @@
 		<img src="<%= movie.Poster %>">
 
 		<form method="post" action="/favorites">
-    	<input type="hidden" value="<%movie.imdbID%>" name="id">
-    	<input type="hidden" value="<%movie.Title%>" name="movie.Title">
-    	<input type="submit">
+    	<input type="hidden" value="<%=movie.imdbID%>" name="ID">
+    	<input type="hidden" value="<%=movie.Title%>" name="Title">
+    	<input type="submit" value="fave movie">
     </form>
 </body>
 </html>

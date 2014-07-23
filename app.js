@@ -6,6 +6,7 @@ var app = express();
 
 var movies = [];
 
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded())
 
 //homepage - just sittin there listening:
@@ -38,9 +39,17 @@ app.get('/movie/:id', function(req, res) {
 });
 
 app.post("/favorites", function(req, res) {
-    console.log(req.body.Title);
-    movies.push(req.body.Title);
-    console.log(movies)
+    var title = req.body.Title;
+    var id = req.body.ID;
+    var obj = {title: title, id: id}
+    movies.push(obj);
+    console.log(title);
+    console.log(movies);
+    res.redirect("/favorites");
+});
+
+app.get("/favorites", function(req, res) {
+  res.render("favorites", {movies: movies})
 })
 
 
