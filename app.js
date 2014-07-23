@@ -1,7 +1,12 @@
 var express = require("express");
 var request = require("request");
+var bodyParser = require('body-parser');
 
 var app = express();
+
+var movies = [];
+
+app.use(bodyParser.urlencoded())
 
 //homepage - just sittin there listening:
 app.get('/', function(req, res){
@@ -31,6 +36,14 @@ app.get('/movie/:id', function(req, res) {
     }
   });
 });
+
+app.post("/favorites", function(req, res) {
+    console.log(req.body.Title);
+    movies.push(req.body.Title);
+    console.log(movies)
+})
+
+
 
 
 
