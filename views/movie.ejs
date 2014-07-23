@@ -5,7 +5,11 @@
 </head>
 <body>
 	<h1>Movie Details: </h1>
-		<%= JSON.stringify(movie) %>
+	<!--	<%= JSON.stringify(movie) %> -->
+		<%= movie.Title %>
+		<%= movie.Year %>
+		<%= movie.Actors %>
+		<img src="<%= movie.Poster %>">
   	
 </body>
 </html>
