@@ -4,6 +4,11 @@
     <title>Movie Search Results</title>
   </head>
   <body>
-    Replace me with a list of movies
+  	<h1>Movies:</h1>
+  	<ul>
+  		<% movieList.forEach(function (movie) { %>
+  		<li><a href="movie/<%= movie.imdbID %>"> <%= movie.Title %> </a></li>
+  	<% }) %>
+
   </body>
 </html>
